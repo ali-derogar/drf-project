@@ -1,7 +1,10 @@
 from django.urls import path , include
-from .views import Article_view
+from .views import Articlelist , Articledetail , Userlist , Userdetail
 
 app_name = "webr"
 urlpatterns = [
-    path('',Article_view.as_view(),name="home")
+    path('',Articlelist.as_view(),name="home"),
+    path('<int:pk>/',Articledetail.as_view(),name="detail"),
+    path('users',Userlist.as_view(),name="user_home"),
+    path('users/<int:pk>/',Userdetail.as_view(),name="user_detail"),
 ]

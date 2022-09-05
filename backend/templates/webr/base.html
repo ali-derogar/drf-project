@@ -7,17 +7,6 @@
     <title>خانه</title>
 </head>
 <body>
-    <center>
-        <article>
-            {% for i in object_list %}
-                <h1>{{i.title}}</h1>
-                <p>{{i.content}}</p>
-                <hr>
-                <span>{{i.author}}</span> -/|\- <span>{{i.published}}</span> 
-            {% empty %}
-            <p>هیچ مقاله ای برای نمایش وجود ندارد</p>
-            {% endfor %}
-        </article>
-    </center>
+    {% block main %}{% endblock %}
 </body>
 </html>

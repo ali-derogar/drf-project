@@ -1,0 +1,14 @@
+{% extends 'webr/base.html' %}
+{% block main %}
+    <center>
+        <article>
+
+                <h1>{{object.username}}</h1>
+                <p>{{object.email}}</p>
+                <hr>
+                <span>{{object.is_active}}</span> -/|\- <span>{{object.is_superuser}}</span> 
+                <hr>
+                <span>{{object.last_name}}</span> -/|\- <span>{{object.date_joined}}</span> 
+        </article>
+    </center>
+{% endblock %}

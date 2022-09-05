@@ -1,0 +1,17 @@
+{% extends 'webr/base.html' %}
+{% block main %}
+    <center>
+        <article>
+            {% for i in object_list %}
+                <h1>{{i.username}}</h1>
+                <p>{{i.email}}</p>
+                <hr>
+                <span>{{i.is_active}}</span> -/|\- <span>{{i.is_superuser}}</span> 
+                <hr>
+                <span>{{i.last_name}}</span> -/|\- <span>{{i.date_joined}}</span> 
+            {% empty %}
+            <p>هیچ یوزری برای نمایش وجود ندارد</p>
+            {% endfor %}
+        </article>
+    </center>
+{% endblock %}
